@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
-import { close, logo, menu } from "../assets";
+import { menu } from "../assets";
+import ankith from "../assets/ankith.png";
 import {
   navLinks,
   navigationPaths,
@@ -26,7 +27,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <img src={ankith} alt="logo" className="w-9 h-9 object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
             {personalInfo.name} &nbsp;
             <span className="lg:block hidden">| {personalInfo.role}</span>

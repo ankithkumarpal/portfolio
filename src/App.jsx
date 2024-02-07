@@ -19,11 +19,10 @@ const App = () => {
         </div>
         <About />
         <Experience />
-        <Tech />
+        {/* <Tech /> */}
         <Works />
-        <div className="relative z-0">
+        <div className="" style={{ padding:"0px" , display:"flex" , alignContent:"center" , justifyContent:"center"}}>
           <Contact />
-          {/* <StarsCanvas /> */}
         </div>
         <HireMe />
       </div>

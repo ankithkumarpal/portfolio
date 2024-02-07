@@ -1,14 +1,8 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
   javascript,
   typescript,
   html,
-  css,
   reactjs,
-  nextJs,
   redux,
   tailwind,
   angular,
@@ -17,19 +11,14 @@ import {
   java,
   mysql,
   git,
-  nickelfox,
-  newgen,
-  skillrisers,
-  proximus,
-  aptihealthWeb,
-  aptihealthApp,
-  zealWeb,
-  zealApp,
-  rollWeb,
-  rollApp,
   linkedIn,
   github,
 } from "../assets";
+import technovert from "../assets/company/technovert.png";
+import tezo from "../assets/company/tezo.png";
+import kaarpool from "../assets/projects/kaarpool.png";
+import uniquecarving from "../assets/projects/uniquecarving.png";
+import movierecommendation from "../assets/projects/movierecommendation.png";
 
 const navigationPaths = {
   home: "/",
@@ -55,20 +44,52 @@ export const navLinks = [
 
 const services = [
   {
-    title: "React Developer",
-    icon: web,
+    title: "HTML 5",
+    icon: html,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
+    title: "JavaScript",
+    icon: javascript,
   },
   {
-    title: "NodeJs Developer",
-    icon: backend,
+    title: "TypeScript",
+    icon: typescript,
   },
   {
-    title: "Javascript Developer",
-    icon: creator,
+    title: "React JS",
+    icon: reactjs,
+  },
+  {
+    title: "Redux Toolkit",
+    icon: redux,
+  },
+  {
+    title: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    title: "Angular",
+    icon: angular,
+  },
+  {
+    title: "Node JS",
+    icon: nodejs,
+  },
+  {
+    title: "MongoDB",
+    icon: mongodb,
+  },
+  {
+    title: "Java",
+    icon: java,
+  },
+  {
+    title: "MySQL",
+    icon: mysql,
+  },
+  {
+    title: "Git",
+    icon: git,
   },
 ];
 
@@ -76,10 +97,6 @@ const technologies = [
   {
     name: "HTML 5",
     icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
   },
   {
     name: "JavaScript",
@@ -92,10 +109,6 @@ const technologies = [
   {
     name: "React JS",
     icon: reactjs,
-  },
-  {
-    name: "Next JS",
-    icon: nextJs,
   },
   {
     name: "Redux Toolkit",
@@ -132,91 +145,115 @@ const technologies = [
 ];
 
 const experiences = [
+ 
   {
-    title: "Software Engineer",
-    company_name: "Nickelfox Technologies",
-    company_website: "https://www.nickelfox.com/",
-    icon: nickelfox,
+    title: "Full Stack Developer",
+    company_name: "Tezo solutions",
+    date: "May 2023 - Present",
+    company_website: "https://tezo.com/",
+    icon: tezo,
     iconBg: "#E6DEDD",
-    date: "Jan 2022 - Present",
     points: [
-      "Developing and maintaining web and mobile applications using React.js, React-native and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      " Achieved a 25% reduction in development time by leveraging the OpenAPI tool for automated API service and model generation, streamlining the development process",
+      "Strategically Established routing with optimal redirect management, resulting in improved website performanceand enhanced user experience.",
+      "Successfully enforced lazy loading, leading to a remarkable reduction in page load time and memory consumption from 54kb to 37kb, significantly enhancing the overall performance of the website.",
+      " Worked in technologies : Angular 15 , React Js , C , .Net(Dot Net core) ,Type Script ,Html , Css , Bootstrap"
     ],
   },
+
   {
-    title: "Software Developer",
-    company_name: "Newgen Software",
-    company_website: "https://newgensoft.com/home-india/",
-    icon: newgen,
+    title: "Full Stack Developer Intern",
+    company_name: "Technovert Solutions",
+    date: "Aug 2022 - May 2023",
+    company_website: "https://tezo.com/",
+    icon: technovert,
     iconBg: "#E6DEDD",
-    date: "Mar 2021 - Dec 2021",
     points: [
-      "Developed a groundbreaking banking product for a Singapore-based firm, improved transaction management.",
-      "Developed a dynamic dashboard for efficient transaction management, resulting in a 30% increase in productivity.",
-      "Optimized frontend performance by achieving 20% reduction in page loading time and make it responsive.",
-      "Created a transaction report generator, reducing report generation time by 50% and enhancing data analysis.",
-    ],
-  },
-  {
-    title: "Software Engineer Intern",
-    company_name: "Skillrisers",
-    company_website: "https://www.skillrisers.com/",
-    icon: skillrisers,
-    iconBg: "#E6DEDD",
-    date: "Jan 2020 - Jul 2020",
-    points: [
-      "Contributed to the development of a Test Engine Application, empowering users to create and conduct tests seamlessly.",
-      "Built three essential modules: Teacher, Student, and Admin, ensuring comprehensive functionality for all user roles.",
-      "Collaborated effectively with the development team, actively participating in code reviews and resolving technical challenges.",
-      "Demonstrated strong problem-solving skills, consistently delivering high-quality code and meeting project deadlines.",
-    ],
-  },
-  {
-    title: "Frontend Developer",
-    company_name: "Self-employed",
-    company_website: "https://proximus.surge.sh/index.html",
-    icon: proximus,
-    iconBg: "#E6DEDD",
-    date: "Jan 2018 - Jan 2021",
-    points: [
-      "Spearheaded the development of a fully responsive website for the college coding society.",
-      "Led coding sessions, actively sharing knowledge and insights to enrich members' programming skills and understanding.",
-      "Organized informative sessions on cutting-edge technologies, including JavaScript and ReactJs.",
-      "Curated and designed challenging coding problems for college competitions.",
-    ],
-  },
+       "Collaborated with a team of 2 to conceptualize and develop a carpool application, showcasing expertise integrating CRUD operations and essential features such as ride booking and offering.",
+       " Created robust user authentication functionalities, encompassing secure login, registration, and logout mechanisms using JWT (JSON Web Tokens), ensuring a seamless and secure user experience.",
+       "Proficiently leveraged a tech stack comprising React.js, .NET Core 7, TypeScript, and Bootstrap to develop innovative and user-friendly web applications"
+    ]
+  }
 ];
+
+const personalInfo = {
+  name: "Ankith",
+  fullName: "Ankith Pal",
+  email: "ankithpal721@gmail.com",
+  role: "Software Developer",
+  about: `I'm a skilled software developer with experience in React Js , Angular , .Net Core  , Node Js , Express Js , 
+  TypeScript , JavaScript ,MongoDb , Sql , Java , Python ,  I'm a quick learner and collaborate closely with clients to
+  create efficient, scalable, and user-friendly solutions that solve
+  real-world problems. Let's work together to bring your ideas to life!`
+};
+
+const publicUrls = {
+  resume:
+    "https://rb.gy/hm91w",
+  socialProfiles: {
+    linkedin: {
+      title: "linkedin",
+      link: "https://www.linkedin.com/in/ankith-pal-772572206/",
+      icon: linkedIn,
+    },
+    github: {
+      title: "github",
+      link: "https://github.com/ankithkumarpal",
+      icon: github,
+    },
+  },
+};
+
 
 const projects = [
   {
-    name: "Aptihealth Web",
-    description:
-      "Revolutionizing mental healthcare in New York State with a user-friendly platform for personalized therapy and progress tracking. Provides the digital gateway to comprehensive behavioral healthcare.",
-    tags: [
+    name: "Carpool Web",
+    description:"A simple carpool website where a user can book ride or offerride from a particular source location to destination. A user can also see history that he booked or offered.",
+      tags: [
       {
-        name: "reactjs",
+        name: "Reactjs",
         color: "blue-text-gradient",
       },
       {
-        name: "redux",
+        name : "Typescript" , 
+        color : "green-text-gradient"
+      },
+      {
+        name: ".Net Core",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Sql",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: kaarpool,
+    hosted_link: "https://github.com/ankithkumarpal/kaarpoolApplication",
+  },
+  {
+    name: "Unique Carving",
+    description:"A shopping site for pencil carved items  . A user can place any number of order by just choose his template and selecting the service he needs.",
+     tags: [
+      {
+        name: "React Js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Express Js",
         color: "green-text-gradient",
       },
       {
-        name: "nodejs",
+        name: "MongoDb",
         color: "pink-text-gradient",
       },
     ],
-    image: aptihealthWeb,
-    hosted_link: "https://www.aptihealth.com/",
+    image: uniquecarving,
+    hosted_link: "https://github.com/ankithkumarpal/uniqueCarving",
   },
   {
-    name: "Aptihealth App",
-    description:
-      "Access top-notch mental healthcare anytime, anywhere in New York State with our innovative app. Track your progress, schedule appointments, and connect with expert therapists for personalized care.",
-    tags: [
+    name: "Movie Recommendation",
+    description:"A movie recommendation system which recommends top 10 movie based on the user selected option, works based on selected movie parameters ",
+     tags: [
       {
         name: "react-native",
         color: "blue-text-gradient",
@@ -230,129 +267,10 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: aptihealthApp,
-    hosted_link: "https://apps.apple.com/us/app/aptihealth/id1477170874",
-  },
-  {
-    name: "Zeal Web",
-    description:
-      "The Zeal website elevates the experience of enjoying activities with trusted friends, fostering connections and making every interaction exciting.",
-    tags: [
-      {
-        name: "reactjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "typescript",
-        color: "green-text-gradient",
-      },
-      {
-        name: "firebase",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: zealWeb,
-    hosted_link: "https://getzeal.co/",
-  },
-  {
-    name: "Zeal App",
-    description:
-      "Discover a world of activities with friends through Zeal, an engaging platform. Create events, post updates, chat, and enjoy in-person activities hassle-free. Boost your social life with Zeal!",
-    tags: [
-      {
-        name: "react-native",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "sendgrid",
-        color: "green-text-gradient",
-      },
-      {
-        name: "typescript",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: zealApp,
-    hosted_link:
-      "https://apps.apple.com/us/app/zeal-activities-with-friends/id6446917140",
-  },
-  {
-    name: "Roll Web",
-    description:
-      "The Roll website is the gateway to the future of decentralized communities and digital assets. It allows users to seamlessly earn, redeem, send, and trade social tokens.",
-    tags: [
-      {
-        name: "reactjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "green-text-gradient",
-      },
-      {
-        name: "formik",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: rollWeb,
-    hosted_link: "https://app.tryroll.com/",
-  },
-  {
-    name: "Roll App",
-    description:
-      "Join the future of decentralized communities and digital assets with Roll. Earn, redeem, send, and trade social tokens on this innovative platform. Experience transparent transactions and captivating UI design.",
-    tags: [
-      {
-        name: "react-native-web",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "green-text-gradient",
-      },
-      {
-        name: "storybook",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: rollApp,
-    hosted_link:
-      "https://play.google.com/store/apps/details?id=com.roll&hl=en_GB",
-  },
+    image: movierecommendation,
+    hosted_link: "https://github.com/ankithkumarpal/ML-_movieRecommendataion",
+  }
 ];
-
-const personalInfo = {
-  name: "Shridhar",
-  fullName: "Shridhar Rai",
-  email: "raishridhar619@gmail.com",
-  role: "Software Developer",
-  about: `I'm a skilled software developer with experience in TypeScript and
-  JavaScript, and expertise in frameworks like React.Js, React-naitve,
-  Node.js etc. I'm a quick learner and collaborate closely with clients to
-  create efficient, scalable, and user-friendly solutions that solve
-  real-world problems. Let's work together to bring your ideas to life!`,
-  projectsIntro: `Following projects showcases my skills and experience through
-  real-world examples of my work. Each project is briefly described with
-  live demos. It reflects my ability to solve complex problems, work
-  with different technologies, and manage projects effectively.`,
-};
-
-const publicUrls = {
-  resume:
-    "https://drive.google.com/file/d/1vmiPiCLaCuqM0uuDcXQlAd8pY8yBDEOU/view?usp=sharing",
-  socialProfiles: {
-    linkedin: {
-      title: "linkedin",
-      link: "https://www.linkedin.com/in/shridharrai/",
-      icon: linkedIn,
-    },
-    github: {
-      title: "github",
-      link: "https://github.com/shridharrai",
-      icon: github,
-    },
-  },
-};
 
 export {
   services,

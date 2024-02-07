@@ -3,10 +3,10 @@ import SectionWrapper from "../hoc/SectionWrapper";
 import { motion } from "framer-motion";
 import { slideIn } from "../utils/motion";
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
-import emailjs from "@emailjs/browser";
-import { personalInfo, publicUrls } from "../constants";
+import { publicUrls } from "../constants";
 import Modal from "./Modal";
+import emailjs from 'emailjs-com';
+
 
 const Contact = () => {
   const formRef = useRef();
@@ -29,56 +29,57 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
+    const sendEmail = () => {
+
+      const serviceId = 'service_52ac83p';
+      const templateId = 'template_wg1tmem';
+      const publicKey = '5dg6sAVDVyVoy4pYz';
+
+      emailjs.send(serviceId, templateId , {
+        from_name: "Ankith",
+        to_name: form.name,
+        message: form.message,
+        reply_to: form.email,
+      } , publicKey)
+      .then(
+            () => {
+              setModalContent({
+                title: "Success!",
+                message: "Thank you. I will get back to you as soon as possilbe.",
+                buttonText: "Ok",
+              });
+              setIsError(false);
+              setIsModalVisible(true);
+    
+              setForm({
+                name: "",
+                email: "",
+                message: "",
+              });
+            },
+            (error) => {
+              console.log("Error while sending mail ", error);
+              setModalContent({
+                title: "Error!",
+                message: "Ahh, something went wrong. Please try again.",
+                buttonText: "Retry",
+              });
+              setIsError(true);
+              setIsModalVisible(true);
+            }
+          )
+          .finally(() => setLoading(false));
+ }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: personalInfo.fullName,
-          from_email: form.email,
-          to_email: personalInfo.email,
-          message: form.message,
-          reply_to: form.email,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setModalContent({
-            title: "Success!",
-            message: "Thank you. I will get back to you as soon as possilbe.",
-            buttonText: "Ok",
-          });
-          setIsModalVisible(true);
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          console.log("Error while sending mail ", error);
-          setModalContent({
-            title: "Error!",
-            message: "Ahh, something went wrong. Please try again.",
-            buttonText: "Retry",
-          });
-          setIsError(true);
-          setIsModalVisible(true);
-        }
-      )
-      .finally(() => setLoading(false));
+    sendEmail();
   };
 
   return (
     <>
-      <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
+      <div className=" flex xl:flex-row flex-col-reverse overflow-hidden ">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
           className="relative flex-[0.75] bg-black-100 p-8 rounded-2xl"
@@ -90,7 +91,7 @@ const Contact = () => {
                 <div
                   key={`social_${profile.title}`}
                   onClick={() => window.open(profile.link, "_blank")}
-                  className="green-pink-gradient lg:w-10 lg:h-10 h-8 w-8 rounded-full flex justify-center items-center cursor-pointer hover:scale-110"
+                  className="green-pink-gradient lg:w-10 lg:h-10 h-8 w-5 rounded-full flex justify-center items-center cursor-pointer hover:scale-110"
                 >
                   <img
                     src={profile.icon}
@@ -108,13 +109,14 @@ const Contact = () => {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="mt-12 flex flex-col gap-8"
+            className=" flex flex-col gap-8"
           >
             <label className="flex flex-col">
               <span className="text-white font-medium mb-4">Your Name</span>
               <input
                 type="text"
                 name="name"
+                width={"20px"}
                 value={form.name}
                 onChange={handleChange}
                 placeholder="What's your good name?"
@@ -134,17 +136,17 @@ const Contact = () => {
               />
             </label>
 
-            <label className="flex flex-col">
+            {/* <label className="flex flex-col">
               <span className="text-white font-medium mb-4">Your Message</span>
               <textarea
-                rows={7}
+                rows={2}
                 name="message"
                 value={form.message}
                 onChange={handleChange}
                 placeholder="What's you want to say?"
                 className="bg-tertiary py-4 px-6 text-white placeholder:text-secondary rounded-lg outline-none border-none font-medium"
               />
-            </label>
+            </label> */}
 
             <button
               type="submit"
@@ -153,13 +155,6 @@ const Contact = () => {
               {loading ? "Sending..." : "Send"}
             </button>
           </form>
-        </motion.div>
-
-        <motion.div
-          variants={slideIn("right", "tween", 0.2, 1)}
-          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-        >
-          <EarthCanvas />
         </motion.div>
       </div>
       {isModalVisible && (
